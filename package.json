@@ -1,0 +1,19 @@
+{
+  "name": "aprendiendo-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "projects/*"
+  ],
+  "scripts": {
+    "co":"sui-mono commit",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@s-ui/mono": "^2.34.0"
+  }
+}
