@@ -1,17 +1,18 @@
-import { useState } from "react"
+/* eslint-disable space-before-function-paren */
+import { useState } from 'react'
 import confetti from 'canvas-confetti'
 
-import { Square } from "./components/Square"
-import { TURNS  } from "./constants"
-import { checkWinnerFrom, checkEndGame } from "./logic/board"
-import { WinnerModal } from "./components/WinnerModal"
-import { saveGameStorage, resetGameStorage } from "./logic/index"
+import { Square } from './components/Square'
+import { TURNS } from './constants'
+import { checkWinnerFrom, checkEndGame } from './logic/board'
+import { WinnerModal } from './components/WinnerModal'
+import { saveGameStorage, resetGameStorage } from './logic/index'
 
 function App() {
   const [board, setBoard] = useState(() => {
     const boardFromStorage = window.localStorage.getItem('board')
-    return boardFromStorage 
-      ? JSON.parse(boardFromStorage) 
+    return boardFromStorage
+      ? JSON.parse(boardFromStorage)
       : Array(9).fill(null)
   }
   )
@@ -66,7 +67,7 @@ function App() {
         {
           board.map((_, index) => {
             return (
-              <Square 
+              <Square
                 key={index}
                 index={index}
                 updateBoard={updateBoard}
@@ -78,15 +79,18 @@ function App() {
         }
       </section>
 
-      <section className="turn">
-        <Square isSelected = {turn === TURNS.X}>
-          {TURNS.X}</Square>
-        <Square isSelected = {turn === TURNS.O}>{
-          TURNS.O}</Square>
+      <section className='turn'>
+        <Square isSelected={turn === TURNS.X}>
+          {TURNS.X}
+        </Square>
+        <Square isSelected={turn === TURNS.O}>{
+          TURNS.O
+        }
+        </Square>
       </section>
 
       <WinnerModal resetGame={resetGame} winner={winner} />
-    </main> 
+    </main>
   )
 }
 

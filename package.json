@@ -7,13 +7,27 @@
     "projects/*"
   ],
   "scripts": {
-    "co":"sui-mono commit",
+    "co": "sui-mono commit",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dprieto078/aprendiendo-react-/tree/master/projects"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dprieto078/aprendiendo-react-/tree/master/projects"
+  },
   "dependencies": {
-    "@s-ui/mono": "^2.34.0"
+    "@s-ui/mono": "2.34.0",
+    "build": "0.1.4"
+  },
+  "devDependencies": {
+    "standard": "17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
   }
 }
