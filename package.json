@@ -22,7 +22,8 @@
   },
   "dependencies": {
     "@s-ui/mono": "2.34.0",
-    "build": "0.1.4"
+    "build": "0.1.4",
+    "package-lock.json": "^1.0.0"
   },
   "devDependencies": {
     "standard": "17.0.0"
